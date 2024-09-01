@@ -16,14 +16,15 @@ body {
     background: #f5f5f5;
     box-shadow: 0 30px 50px #dbdbdb;
     margin: 0 auto;
+    overflow: hidden;
 }
 
 .slider-heading {
     position: absolute;
-    top: 25px;
+    top: 15px;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #fff;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     z-index: 1;
@@ -33,7 +34,6 @@ body {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
     padding: 10px;
     border-radius: 5px;
-
 }
 
 .slide {
@@ -161,4 +161,65 @@ body {
 .button button:hover {
     background: #ababab;
     color: #fff;
+}
+
+/* Mobile responsiveness adjustments */
+@media (max-width: 768px) {
+    .slider-heading {
+        font-size: 1.5rem;
+        top: 10px;
+    }
+    .slide .item {
+        width: 90%;
+        height: auto;
+        top: 0;
+        left: 5%;
+        transform: translateY(0);
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+    .item .content {
+        left: 20px;
+        width: calc(100% - 40px);
+    }
+    .content .name {
+        font-size: 1.2rem;
+    }
+    .content .des {
+        font-size: 0.9rem;
+    }
+    .content button {
+        padding: 8px 16px;
+    }
+    .button {
+        bottom: 10px;
+    }
+    .button button {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .slider-heading {
+        font-size: 1.2rem;
+    }
+    .slide .item {
+        width: 100%;
+        left: 0;
+    }
+    .item .content {
+        left: 10px;
+        width: calc(100% - 20px);
+    }
+    .content .name {
+        font-size: 1rem;
+    }
+    .content .des {
+        font-size: 0.8rem;
+    }
+    .button button {
+        width: 25px;
+        height: 25px;
+    }
 }
